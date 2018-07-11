@@ -11,7 +11,7 @@ bool cmp(int a, int b) {
 
 int main()
 {
-    int cnt;      // ×ÜÈËÊın
+    int cnt;      // æ€»äººæ•°n
     scanf("%d", &cnt);
     for(int i = 0; i < cnt; i++) {
         scanf("%d", &num[i]);
@@ -21,11 +21,11 @@ int main()
     } else {
         sort(num, num + cnt, cmp);
         int m = (int)ceil(sqrt(cnt * 1.0));
-        while(cnt % m != 0) {     // m¾¡¿ÉÄÜ´ó
+        while(cnt % m != 0) {     // må°½å¯èƒ½å¤§
             m++;
         }
         int n = cnt / m, i = 1, j = 1, now = 0;
-        int u = 1, d = m, l = 1, r = n;     // 4¸ö±ß½ç
+        int u = 1, d = m, l = 1, r = n;     // 4ä¸ªè¾¹ç•Œ
         while(now < cnt) {
             while(now < cnt && j < r) {
                 table[i][j] = num[now++];
@@ -44,13 +44,13 @@ int main()
                 table[i][j] = num[now++];
                 i--;
             }
-            u++, d--, l++, r--;     // ËõĞ¡±ß½ç
-            i++, j++;       // Î»ÒÆÖÁÄÚ²ã×óÉÏ½Ç
+            u++, d--, l++, r--;     // ç¼©å°è¾¹ç•Œ
+            i++, j++;           // ä½ç§»è‡³å†…å±‚å·¦ä¸Šè§’
             if(now == cnt - 1) {
                 table[i][j] = num[now++];
             }
         }
-        for(int i = 1; i <= m; i++) {       // Êä³ö
+        for(int i = 1; i <= m; i++) {       // è¾“å‡º
             for(int j = 1; j <= n; j++) {
                 printf("%d", table[i][j]);
                 if(j < n) printf(" ");
