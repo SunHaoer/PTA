@@ -8,7 +8,7 @@ int main()
     vector<int> vt;
     int n, ans1 = 0, ans2 = 0;
     scanf("%d", &n);
-    for(int i = 0; i < n; i++) {        // ÊäÈë
+    for(int i = 0; i < n; i++) {            // ÊäÈë
         int temp;
         scanf("%d", &temp);
         vt.push_back(temp);
