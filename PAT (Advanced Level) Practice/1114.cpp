@@ -27,13 +27,11 @@ int findFather(int x) {     // Ñ°ÕÒ×æ×Ú
     while(x != father[x]) {
         x = father[x];
     }
-
     while(a != father[a]) {
         int z = a;
         a = father[a];
         father[z] = x;
     }
-
     return x;
 }
 
