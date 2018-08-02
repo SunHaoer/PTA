@@ -11,14 +11,14 @@ int main()
     string color, maxColor;
     int maxNum = -1;
     scanf("%d%d", &m, &n);
-    for(int i = 0; i < n; i++) {        // ÊäÈë
+    for(int i = 0; i < n; i++) {        // è¾“å…¥
         for(int j = 0; j < m; j++) {
             color.resize(15);
             scanf("%s", &color[0]);
             mp[color.c_str()]++;
         }
     }
-    for(map<string, int>::iterator it = mp.begin(); it != mp.end(); it++) {     // ÕÒ×î´óÖµ
+    for(map<string, int>::iterator it = mp.begin(); it != mp.end(); it++) {     // æ‰¾æœ€å¤§å€¼
         if(it->second > maxNum) {
             maxNum = it->second;
             maxColor = it->first;
