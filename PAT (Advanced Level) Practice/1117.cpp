@@ -11,11 +11,11 @@ int main()
 {
     int n, day[MAX], E = 0;
     scanf("%d", &n);
-    for(int i = 0; i < n; i++) {    // ÊäÈë
+    for(int i = 0; i < n; i++) {    // è¾“å…¥
         scanf("%d", &day[i]);
     }
     sort(day, day + n, cmp);
-    for(int i = 0; i < n; i++) {    // ¼ÆËã
+    for(int i = 0; i < n; i++) {    // è®¡ç®—
         if(i + 1 < day[i]) {
             E = i + 1;
         }

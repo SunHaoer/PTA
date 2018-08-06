@@ -10,7 +10,7 @@ struct Node {
     Node *lchild, *rchild;
 };
 
-void Insert(Node *&root, int data) {    // 插入元素
+void Insert(Node *&root, int data) {    // 鎻掑叆鍏冪礌
     if(root == NULL) {
         root = new Node;
         root->data = data;
@@ -21,7 +21,7 @@ void Insert(Node *&root, int data) {    // 插入元素
     else Insert(root->rchild, data);
 }
 
-void layerOrder(Node* root) {       // 层序遍历
+void layerOrder(Node* root) {       // 灞傚簭閬嶅巻
     queue<Node*> q;
     root->layer = 1;
     q.push(root);
@@ -46,7 +46,7 @@ int main()
     int n, data;
     scanf("%d", &n);
     Node* root = NULL;
-    for(int i = 0; i < n; i++) {        // 输入
+    for(int i = 0; i < n; i++) {        // 杈撳叆
         scanf("%d", &data);
         Insert(root, data);
     }

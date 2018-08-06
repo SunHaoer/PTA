@@ -8,10 +8,10 @@ int main()
     int n;
     double sum = 0, num[MAX];
     scanf("%d", &n);
-    for(int i = 0; i < n; i++) {        // ÊäÈë
+    for(int i = 0; i < n; i++) {        // è¾“å…¥
         scanf("%lf", &num[i]);
     }
-    for(int i = 0; i < n; i++) {        // ¼ÆËã
+    for(int i = 0; i < n; i++) {        // è®¡ç®—
         sum += (num[i] * (n - i) * (i + 1));
     }
     printf("%.2f\n", sum);
