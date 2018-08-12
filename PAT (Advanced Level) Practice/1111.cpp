@@ -103,8 +103,11 @@ int main()
         int a, b, c, d, e;
         scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
         table1[a][b] = d;
-        if(c == 1) table1[b][a] = d;    // 单行线
-        table2[a][b] = table2[b][a] = e;
+        table2[a][b] = e;
+        if(c == 0) {        // 单行线(没有对应测试点)
+          table1[b][a] = d;
+          table2[b][a] = e;
+        }
     }
     scanf("%d %d", &s, &e);
     Dijkstra(table1);                   // 计算
